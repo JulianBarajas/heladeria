@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thais Cream - Heladería</title>
+    <meta
+      name="description"
+      content="Descubre Thais Cream, la heladería artesanal que crea experiencias únicas y deliciosas. Visítanos y vive momentos inolvidables con nuestros helados."
+    />
+    <link rel="canonical" href="https://julianbarajas.github.io/heladeria/" />
     <link rel="icon" href="img/logo_sinfondo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link defer rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -24,6 +29,9 @@
           <img src="img/logo.webp" alt="logo" loading="lazy" />
         </div>
         <nav class="nav-links" id="nav-links">
+          <button class="cerrar-menu" id="cerrar-menu" aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <ul>
             <li><a href="#inicio" class="nav-item active">Inicio</a></li>
             <li><a href="#helados" class="nav-item">Helados</a></li>
@@ -31,10 +39,11 @@
               <a href="#experiencias" class="nav-item">Experiencias Thaís</a>
             </li>
             <li><a href="#nosotros" class="nav-item">Nuestra Tienda</a></li>
+            <li><a href="#preguntas" class="nav-item">Preguntas</a></li>
             <li><a href="#contacto" class="nav-item">Contacto</a></li>
           </ul>
         </nav>
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Menú hamburguesa">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -68,6 +77,7 @@
             href="https://api.whatsapp.com/send?phone=573045354056&text=Hola%2C%20quiero%20hacer%20una%20reservación%20con%20ustedes"
             target="_blank"
             class="reserve-btn"
+            aria-label="Reservar"
           >
             Quiero reservar
           </a>
@@ -98,6 +108,25 @@
         </div>
       </div>
     </section>
+    <section id="productos">
+      <div class="producto">
+        <img src="img/HeladoCocktail.jpg" alt="Producto" />
+        <h2>Nombre del Producto</h2>
+        <p>
+          Descripción breve del producto. Explica sus características y
+          beneficios.
+        </p>
+        <h3>$39.000</h3>
+        <!-- Reemplazamos el href estático por "#" y agregamos un id para identificar el botón -->
+        <a href="#" class="btn-comprar" id="btn-comprar">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/MercadoPago.svg"
+            alt="Mercado Pago"
+          />
+          Comprar ahora
+        </a>
+      </div>
+    </section>
     <section class="cumpleanos-section">
       <div>
         <h2>
@@ -107,6 +136,7 @@
           href="https://api.whatsapp.com/send?phone=573045354056&text=Hola%2C%20quiero%20hacer%20una%20reservación%20con%20ustedes"
           target="_blank"
           class="reserve-btn"
+          aria-label="Reservar"
         >
           Quiero reservar
         </a>
@@ -135,9 +165,61 @@
             href="https://maps.app.goo.gl/pvoaoJqGaJ9en7ar7"
             target="_blank"
             class="maps-btn"
+            aria-label="Como llegar"
           >
             Como llegar
           </a>
+        </div>
+      </div>
+    </section>
+    <section id="preguntas" class="faq-section">
+      <div class="faq-container">
+        <div class="faq-content">
+          <h2>Preguntas Frecuentes</h2>
+          <details>
+            <summary>¿Qué tipos de helados ofrecen?</summary>
+            <p>
+              Ofrecemos una variedad de helados artesanales, desde clásicos
+              hasta innovadores, incluyendo opciones veganas y sin azúcar.
+            </p>
+          </details>
+          <details>
+            <summary>¿Utilizan ingredientes naturales?</summary>
+            <p>
+              Sí, todos nuestros helados se elaboran con ingredientes naturales
+              y de alta calidad, sin conservantes artificiales.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Tienen opciones sin lactosa?</summary>
+            <p>
+              Contamos con helados sin lactosa y alternativas veganas para
+              quienes tienen restricciones alimentarias.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Realizan pedidos para eventos?</summary>
+            <p>
+              Sí, ofrecemos servicio de pedidos para cumpleaños, eventos y
+              reuniones. Contáctanos para más información.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Dónde están ubicados?</summary>
+            <p>
+              Nuestra heladería se encuentra en Calle X #123, Ciudad, País. ¡Ven
+              a visitarnos!
+            </p>
+          </details>
+        </div>
+        <div class="faq-video">
+          <video autoplay muted loop playsinline>
+            <source src="video/HeladoPolloBroaster.mp4" type="video/mp4" />
+            Tu navegador no soporta video.
+          </video>
         </div>
       </div>
     </section>
@@ -157,8 +239,12 @@
         <div class="column social-media">
           <h2>Síguenos</h2>
           <div class="social-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/thais_cream/"
+            <a href="" aria-label="logo de facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/thais_cream/"
+              aria-label="logo de instagram"
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
@@ -170,10 +256,10 @@
         <p>&copy; 2025 Thais Cream. Todos los derechos reservados.</p>
       </div>
     </footer>
-    <button id="scrollToTop" class="scroll-to-top">
+    <button id="scrollToTop" class="scroll-to-top" aria-label="ir arriba">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <script ddefer src="helados.js"></script>
+    <script defer src="helados.js"></script>
     <script defer src="script.js"></script>
   </body>
 </html>

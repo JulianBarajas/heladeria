@@ -188,9 +188,11 @@ body {
 }
 
 .reservacion-info h2 {
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
+  letter-spacing: 1px;
 }
 
 .reservacion-info p {
@@ -246,15 +248,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 50px 5%;
   border-radius: 12px;
   text-align: center;
 }
 
 .experiencias-thai h2 {
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   margin-bottom: 40px;
   color: #333;
+  letter-spacing: 1px;
 }
 
 .experiencias-grid {
@@ -307,8 +311,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 900px;
   gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .texto-experiencia {
@@ -317,10 +322,12 @@ body {
 }
 
 .texto-experiencia h2 {
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .texto-experiencia p {
@@ -344,20 +351,22 @@ body {
 .cumpleanos-section {
   text-align: center;
   padding: 50px 20px;
-  background-color: #fffae5;
+  background-color: #ffeef3;
 }
 
 .cumpleanos-section h2 {
+  font-family: "Anton", sans-serif;
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .cumpleanos-section .reserve-btn {
   display: inline-block;
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #cc0055; /* Naranja suave */
+  background-color: #cc0055;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -397,6 +406,7 @@ body {
 }
 
 .location-info h2 {
+  font-family: "Anton", sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
@@ -502,8 +512,10 @@ body {
 
 .contact-info h2,
 .social-media h2 {
+  font-family: "Anton", sans-serif;
   font-size: 1.5em;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .contact-info p {
@@ -524,6 +536,144 @@ body {
 
 .social-icons a:hover {
   color: #cc0055;
+}
+
+.faq-section {
+  background-color: #ffeef3;
+  padding: 50px 20px;
+}
+
+.faq-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.faq-content {
+  flex: 1;
+  order: 1;
+}
+
+.faq-content h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.faq-content details {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.faq-content details summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #cc0055;
+  padding: 5px 0;
+  outline: none;
+}
+
+.faq-content details[open] summary::after {
+  content: "▲";
+  float: right;
+}
+.faq-content details:not([open]) summary::after {
+  content: "▼";
+  float: right;
+}
+
+.faq-content details p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  padding-left: 15px;
+}
+
+.faq-video {
+  flex: 1;
+  order: 0;
+}
+
+.faq-video video {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#productos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+}
+
+.producto {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.producto h2 {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.producto p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.precio {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* Botón de compra */
+.btn-comprar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #009ee3;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-comprar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.btn-comprar:hover {
+  background-color: #007bb5;
 }
 
 @media (max-width: 768px) {
@@ -624,6 +774,9 @@ body {
     margin: 0 auto;
     margin-bottom: 20px;
   }
+  .video-experiencia {
+    width: 80%;
+  }
   .location-container {
     flex-direction: column;
     gap: 20px;
@@ -643,8 +796,11 @@ body {
   .experiencia-extra {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
-
+  .experiencias-thai {
+    padding: 30px 3%;
+  }
   .texto-experiencia {
     text-align: center;
   }
@@ -671,5 +827,44 @@ body {
   .cumpleanos-section .reserve-btn {
     font-size: 16px;
     padding: 10px 20px;
+  }
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .faq-content {
+    order: 1;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .faq-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .faq-content details summary {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .faq-content details p {
+    font-size: 0.95rem;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .faq-video {
+    order: 2;
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .faq-video video {
+    width: 100%;
   }
 }

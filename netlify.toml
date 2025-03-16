@@ -1,0 +1,3 @@
+[build]
+  publish = "."            # Si tu index.html está en la raíz, usa "."
+  functions = "netlify/functions"
